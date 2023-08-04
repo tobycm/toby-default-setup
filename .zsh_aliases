@@ -1,0 +1,25 @@
+alias c.="cd .."
+alias makevenv="py -m venv .venv"
+alias venv="source .venv/bin/activate"
+alias cls="clear"
+
+mkcd ()
+{
+  mkdir "$1" && cd "$1"
+}
+rr ()
+{
+  rm -r "$1"
+}
+
+alias cd="pushd"
+
+loadgitkey ()
+{
+  ssh-add ~/creds/github
+}
+
+filecaddy () 
+{
+  caddy file-server --listen :$1
+}

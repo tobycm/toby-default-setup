@@ -6,7 +6,7 @@ sudo chsh toby -s /bin/zsh
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-sudo apt install python3-venv
+sudo apt install python3-venv -y
 
 cd ~/.local/
 

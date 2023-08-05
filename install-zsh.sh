@@ -6,15 +6,15 @@ sudo chsh toby -s /bin/zsh
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-sudo apt install python3-venv -y
-
-cd ~/.local/
-
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-python3 -m venv venv
+sudo apt install python3-venv -y
 
-source venv/bin/activate
+mkdir -p ~/.local/
+
+python3 -m venv ~/.local/venv
+
+source ~/.local/venv/bin/activate
 
 pip install --upgrade pip
 

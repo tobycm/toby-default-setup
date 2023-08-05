@@ -6,3 +6,4 @@ wget -O flutter.tar.xz https://storage.googleapis.com/flutter_infra_release/rele
 
 tar xJf flutter.tar.xz -C ~/apps/
 
+rm flutter.tar.xz

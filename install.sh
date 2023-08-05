@@ -15,8 +15,3 @@ cat ssh-key.pub >> ~/.ssh/authorized_keys
 [[ ! -f ./install-nodejs.sh ]] || ./install-nodejs.sh
 
 [[ ! -f ./install-asdf.sh ]] || ./install-asdf.sh
-
-# log
-sudo adduser toby adm
-
-

@@ -24,4 +24,6 @@ cd ~/.oh-my-zsh/plugins
 
 git clone https://github.com/johnhamelink/env-zsh.git env
 
+cd ~
+
 [[ ! -f ./install-bat.sh ]] || ./install-bat.sh

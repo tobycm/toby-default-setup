@@ -1,3 +1,3 @@
-npm install pm2 -g
+sudo npm install pm2 -g
 
 $(pm2 startup)

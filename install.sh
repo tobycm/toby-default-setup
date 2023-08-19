@@ -1,5 +1,7 @@
 sudo ""
 
+export NEEDRESTART_MODE=a
+
 cat ssh-key.pub >> ~/.ssh/authorized_keys
 
 [[ ! -f ./install-doas.sh ]] || ./install-doas.sh

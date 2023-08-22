@@ -169,8 +169,8 @@ fi
 # Custom aliases
 . ~/.zsh_aliases
 
-export PATH=$PATH:/home/toby/.local/bin
-export PATH=$PATH:/home/toby/.local/venv/bin
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/venv/bin
 export PATH=$PATH:/usr/sbin/
 
 eval $(thefuck -a)
@@ -184,4 +184,14 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 alias sudo=doas
 
 # flutter
-export PATH=/home/toby/apps/flutter/bin:$PATH
+export PATH=$HOME/apps/flutter/bin:$PATH
+
+# go
+export PATH=$HOME/apps/go/bin:$PATH
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

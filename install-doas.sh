@@ -1,4 +1,4 @@
-sudo apt install git build-essential byacc -y
+sudo DEBIAN_FRONTEND=noninteractive apt-get install git build-essential byacc -y
 
 git clone https://github.com/Duncaen/OpenDoas
 

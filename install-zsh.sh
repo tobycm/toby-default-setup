@@ -1,4 +1,4 @@
-sudo apt install git wget zsh -y
+sudo DEBIAN_FRONTEND=noninteractive apt-get install git wget zsh -y
 
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
@@ -8,7 +8,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-sudo apt install python3-venv -y
+sudo DEBIAN_FRONTEND=noninteractive apt-get install python3-venv -y
 
 mkdir -p ~/.local/
 

@@ -1,4 +1,4 @@
-sudo DEBIAN_FRONTEND=noninteractive apt-get install curl git zip unzip xz-utils clang cmake ninja-build pkg-config libgtk-3-dev liblzma-dev -y
+sudo apt-get install curl git zip unzip xz-utils clang cmake ninja-build pkg-config libgtk-3-dev liblzma-dev -y
 
 mkdir -p ~/apps/
 

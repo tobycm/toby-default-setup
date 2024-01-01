@@ -89,6 +89,7 @@ plugins=(
   jsontools
   history
   asdf
+  python
 )
 
 source $ZSH/oh-my-zsh.sh

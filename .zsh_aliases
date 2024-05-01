@@ -23,3 +23,5 @@ filecaddy ()
 {
   caddy file-server --listen :$1
 }
+
+alias pipir="pip install -U -r requirements.txt"

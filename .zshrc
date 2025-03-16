@@ -88,7 +88,6 @@ plugins=(
   dirhistory
   jsontools
   history
-  asdf
   python
 )
 
@@ -196,3 +195,6 @@ export PATH=$HOME/apps/go/bin:$PATH
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# asdf
+export PATH="$HOME/.asdf/:$PATH"

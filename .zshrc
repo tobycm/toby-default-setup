@@ -199,3 +199,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # asdf
 export PATH="$HOME/.asdf/:$PATH"
+export PATH="$HOME/.asdf/shims/:$PATH"

@@ -81,6 +81,7 @@ TZ='America/Vancouver'; export TZ
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  asdf
   env
   zsh-autosuggestions
   copyfile
@@ -173,9 +174,9 @@ export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.local/venv/bin
 export PATH=$PATH:/usr/sbin/
 
-eval $(thefuck -a)
-eval $(thefuck -a f)
-eval $(thefuck -a frick)
+# eval $(thefuck -a)
+# eval $(thefuck -a f)
+# eval $(thefuck -a frick)
 
 alias cat='batcat --paging=never'
 
@@ -198,7 +199,3 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # asdf
 export PATH="$HOME/.asdf/:$PATH"
-
-# asdf completions
-[ -s "$HOME/.asdf/completions.zsh" ] && source "$HOME/.asdf/completions.zsh"
-

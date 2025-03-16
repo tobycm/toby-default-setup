@@ -43,4 +43,3 @@ rm asdf.tar.gz
 
 echo "asdf downloaded and extracted successfully!"
 
-$INSTALL_DIR/asdf completion zsh > $INSTALL_DIR/completions.zsh

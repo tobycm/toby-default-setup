@@ -2,6 +2,7 @@ alias c.="cd .."
 alias makevenv="python3 -m venv .venv"
 alias venv="source .venv/bin/activate"
 alias cls="clear"
+alias python="python3"
 
 mkcd ()
 {

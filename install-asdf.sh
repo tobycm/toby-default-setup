@@ -3,7 +3,7 @@ sudo apt-get install wget -y
 VERSION="0.16.5" # Set this to the desired version
 BASE_URL="https://github.com/asdf-vm/asdf/releases/download/v$VERSION"
 
-INSTALL_DIR="~/.asdf"
+INSTALL_DIR="$HOME/.asdf"
 
 # Detect architecture and OS
 OS="$(uname -s | tr '[:upper:]' '[:lower:]')"
@@ -28,10 +28,11 @@ wget "$BASE_URL/$TARBALL" -O "asdf.tar.gz"
 wget "$BASE_URL/$MD5SUM" -O "asdf.md5"
 
 # Verify checksum
-md5sum -c asdf.md5 || {
-    echo "MD5 checksum failed!"
-    exit 1
-}
+EXPECTED_HASH=$(cat asdf.md5)
+ACTUAL_HASH=$(md5sum asdf.tar.gz | awk '{print $1}')
+if [[ "$EXPECTED_HASH" != "$ACTUAL_HASH" ]]; then
+    echo "MD5 checksum failed!"; exit 1;
+fi
 
 rm asdf.md5
 
@@ -41,3 +42,5 @@ tar -xf asdf.tar.gz -C $INSTALL_DIR
 rm asdf.tar.gz
 
 echo "asdf downloaded and extracted successfully!"
+
+$INSTALL_DIR/asdf completion zsh > $INSTALL_DIR/completions.zsh

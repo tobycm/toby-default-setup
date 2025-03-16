@@ -198,3 +198,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # asdf
 export PATH="$HOME/.asdf/:$PATH"
+
+# asdf completions
+[ -s "$HOME/.asdf/completions.zsh" ] && source "$HOME/.asdf/completions.zsh"
+

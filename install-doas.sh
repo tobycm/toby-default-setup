@@ -13,5 +13,3 @@ cd ..
 rm -rf OpenDoas
 
 sudo runuser -c "echo 'permit nopass keepenv :toby as root' > /etc/doas.conf"
-
-sudo ln -f /usr/local/bin/doas /bin/sudo

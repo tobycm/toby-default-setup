@@ -1,4 +1,4 @@
-sudo apt-get install git build-essential byacc -y
+sudo apt-get install git build-essential byacc libcrypt-dev -y
 
 git clone https://github.com/Duncaen/OpenDoas
 

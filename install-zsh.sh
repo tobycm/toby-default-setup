@@ -18,8 +18,6 @@ source ~/.local/venv/bin/activate
 
 pip install --upgrade pip
 
-pip install thefuck
-
 cd ~/.oh-my-zsh/plugins
 
 git clone https://github.com/johnhamelink/env-zsh.git env

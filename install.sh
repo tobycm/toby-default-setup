@@ -10,4 +10,4 @@ cat ssh-key.pub >> ~/.ssh/authorized_keys
 
 [[ ! -f ./install-docker.sh ]] || ./install-docker.sh
 
-[[ ! -f ./install-mise.sh ]] || ./install-asdf.sh
+[[ ! -f ./install-mise.sh ]] || ./install-mise.sh

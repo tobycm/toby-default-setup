@@ -54,7 +54,3 @@ alias sudo=doas
 
 # go
 export PATH=$HOME/apps/go/bin:$PATH
-
-# terminal-wakatime setup
-export PATH="$HOME/.wakatime:$PATH"
-eval "$(terminal-wakatime init)"

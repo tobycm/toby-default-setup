@@ -2,26 +2,25 @@ sudo apt-get install git wget zsh -y
 
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
-sudo chsh toby -s /bin/zsh
+sudo chsh $USER -s /bin/zsh
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
-sudo apt-get install python3-venv -y
+git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 mkdir -p ~/.local/
 
-python3 -m venv ~/.local/venv
+[[ ! -f ./install-uv.sh ]] || ./install-uv.sh
 
-source ~/.local/venv/bin/activate
+if command -v uv &> /dev/null; then
+    uv venv ~/.local/venv
+else
+    echo "uv is missing. no global venv."
+fi
 
-pip install --upgrade pip
-
-cd ~/.oh-my-zsh/plugins
-
-git clone https://github.com/johnhamelink/env-zsh.git env
-
-cd ~
+git clone --depth=1 https://github.com/johnhamelink/env-zsh.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/env
 
 [[ ! -f ./install-bat.sh ]] || ./install-bat.sh
+
+cp .zshrc ~
+cp .zsh_aliases ~

@@ -1,7 +1,4 @@
 alias c.="cd .."
-alias makevenv="python3 -m venv .venv"
-alias venv="source .venv/bin/activate"
-alias cls="clear"
 alias python="python3"
 
 mkcd ()
@@ -15,14 +12,8 @@ rr ()
 
 alias cd="pushd"
 
-loadgitkey ()
-{
-  ssh-add ~/creds/github
-}
-
 filecaddy () 
 {
   caddy file-server --listen :$1
 }
 
-alias pipir="pip install -U -r requirements.txt"

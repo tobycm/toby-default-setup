@@ -1,6 +1,6 @@
 sudo apt-get install git build-essential byacc libcrypt-dev -y
 
-git clone https://github.com/Duncaen/OpenDoas
+git clone --depth=1 https://github.com/Duncaen/OpenDoas
 
 cd OpenDoas
 
@@ -12,4 +12,4 @@ cd ..
 
 rm -rf OpenDoas
 
-sudo runuser -c "echo 'permit nopass keepenv :toby as root' > /etc/doas.conf"
+sudo runuser -c "echo 'permit nopass keepenv :$USER as root' > /etc/doas.conf"

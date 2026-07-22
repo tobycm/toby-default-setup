@@ -1,4 +1,4 @@
-sudo "echo hi :3"
+sudo echo "hi :3"
 
 export DEBIAN_FRONTEND=noninteractive
 

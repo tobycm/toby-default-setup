@@ -24,3 +24,4 @@ git clone --depth=1 https://github.com/johnhamelink/env-zsh.git ${ZSH_CUSTOM:-$H
 
 cp .zshrc ~
 cp .zsh_aliases ~
+cp .p10k.zsh ~
